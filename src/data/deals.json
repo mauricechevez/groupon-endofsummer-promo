@@ -149,7 +149,84 @@
             "starsImgUrl":"../assets/img/stars_4point5.png",
             "number_reviews":"2,063"
          }
-      }     
+      },
+      {
+         "title":"Standup: New York Comedy Club",
+         "company":"New York Comedy Club",
+         "location":"New York, NY",
+         "originalPrice":"$234",
+         "dealPrice":"$16.72",
+         "fromPrice":"",
+         "img_url":"../assets/img/newyork_comedy_club.jpg",
+         "expiring":"true",
+         "expiring_info":{
+            "saleEndInfo":"Sale Ends 8/27"
+         },
+         "starRating": "",
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"2,063"
+         }
+      },
+      {
+         "title":"Party Cruise Admission",
+         "company":"Booze Cruise Party Cruise",
+         "location":"New York, NY",
+         "originalPrice":"$40",
+         "dealPrice":"$15",
+         "fromPrice":"",
+         "img_url":"../assets/img/booze_cruise.jpg",
+         "expiring":false,
+         "expiring_info":{
+            "saleEndInfo":""
+         },
+         "starRating": "",
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"2,063"
+         }
+      },
+      {
+         "title":"Central Park Bike Rentals",
+         "company":"Must See Central Park - Bike",
+         "location":"New York, NY",
+         "originalPrice":"$20",
+         "dealPrice":"$8.50",
+         "fromPrice":"",
+         "img_url":"../assets/img/central_park_bike_rentals.jpg",
+         "expiring":true,
+         "expiring_info":{
+            "saleEndInfo":"Sale Ends 8/27"
+         },
+         "starRating": true,
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"706"
+         }
+      },
+      {
+         "title":"Midnight Party Cruise",
+         "company":"Midnight Yacht Party ",
+         "location":"New York, NY",
+         "originalPrice":"$40",
+         "dealPrice":"$10",
+         "fromPrice":"",
+         "img_url":"../assets/img/midnight_yacht_party.jpg",
+         "expiring":false,
+         "expiring_info":{
+            "saleEndInfo":""
+         },
+         "starRating": "",
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"2,063"
+         }
+      }
     ]
 }
+
 

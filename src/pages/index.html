@@ -140,33 +140,183 @@ subject: Grab End of Summer Events for $25 or Less
     <!-- END of Groupon Advertisements -->
     <!-- Next 18 Deals -->
     <row>
-        {{#each deals.deals18}}
         <columns large="6">
-            <img src="{{this.img_url}}" alt="{{this.title}}">
-            <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            {{#with deals.deals18.[0] as | deals18 |}}
+            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <h3>{{deals18.title}}</h3>
+            <p class="small-text">{{deals18.company}}</p>
+            <p class="small-text">{{deals18.location}}</p>
             <!-- Star Rating Info -->
-            {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{#if deals18.starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#if this.originalPrice}}
-            <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+            {{#if deals18.originalPrice}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
             {{else}}
-            <span class="green-deal__text">{{this.fromPrice}}</span>
+            <span class="green-deal__text">{{deals18.fromPrice}}</span>
             {{/if}}
             <!-- Extra/Miscellaneous info -->
-            {{#if this.extra_info}}
-            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{#if deals18.extra_info}}
+            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{#if deals18.expiring}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
+            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
             {{/if}}
-            
-        {{/each}}
+        {{/with}}
+        </columns>
+        <columns large="6">
+            {{#with deals.deals18.[1] as | deals18 |}}
+            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <h3>{{deals18.title}}</h3>
+            <p class="small-text">{{deals18.company}}</p>
+            <p class="small-text">{{deals18.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if deals18.starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#if deals18.originalPrice}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+            {{else}}
+            <span class="green-deal__text">{{deals18.fromPrice}}</span>
+            {{/if}}
+            <!-- Extra/Miscellaneous info -->
+            {{#if deals18.extra_info}}
+            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if deals18.expiring}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
+            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
         </columns>
     </row>
+    <!--2-->
+    <row>
+        <columns large="6">
+            {{#with deals.deals18.[2] as | deals18 |}}
+            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <h3>{{deals18.title}}</h3>
+            <p class="small-text">{{deals18.company}}</p>
+            <p class="small-text">{{deals18.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if deals18.starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless deals18.expiring}}
+                {{#if deals18.originalPrice}}
+                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if deals18.extra_info}}
+            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if deals18.expiring}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
+            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+        <columns large="6">
+            {{#with deals.deals18.[3] as | deals18 |}}
+            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <h3>{{deals18.title}}</h3>
+            <p class="small-text">{{deals18.company}}</p>
+            <p class="small-text">{{deals18.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if deals18.starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless deals18.expiring}}
+                {{#if deals18.originalPrice}}
+                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if deals18.extra_info}}
+            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if deals18.expiring}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
+            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+    </row>
+    <!--4-->
+    <row>
+        <columns>
+            {{#with deals.deals18.[4] as | deals18 |}}
+            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <h3>{{deals18.title}}</h3>
+            <p class="small-text">{{deals18.company}}</p>
+            <p class="small-text">{{deals18.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if deals18.starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless deals18.expiring}}
+                {{#if deals18.originalPrice}}
+                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if deals18.extra_info}}
+            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if deals18.expiring}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
+            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+        <columns>
+            {{#with deals.deals18.[5] as | deals18 |}}
+            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <h3>{{deals18.title}}</h3>
+            <p class="small-text">{{deals18.company}}</p>
+            <p class="small-text">{{deals18.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if deals18.starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless deals18.expiring}}
+                {{#if deals18.originalPrice}}
+                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if deals18.extra_info}}
+            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if deals18.expiring}}
+            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
+            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+    </row>
+    <!--6-->
+    
 </container>
