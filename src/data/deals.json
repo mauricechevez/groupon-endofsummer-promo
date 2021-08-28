@@ -117,7 +117,8 @@
          "company":"New York Mets",
          "location":"Flushing, NY",
          "originalPrice":"",
-         "dealPrice":"From $5",
+         "dealPrice":"",
+         "fromPrice":"From $5",
          "img_url":"../assets/img/ny_mets.jpg",
          "expiring":"",
          "expiring_info":{

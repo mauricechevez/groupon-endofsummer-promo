@@ -150,9 +150,11 @@ subject: Grab End of Summer Events for $25 or Less
             <p><span style="display:inline-block;"><img src="{{deals.deals18.[0].ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals.deals18.[0].ratingsInfo.number_reviews}})</span></p>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#unless deals.deals18.[0].expiring}}
+            {{#if deals.deals18.[0].originalPrice}}
             <span class="strike">{{deals.deals18.[0].originalPrice}}</span><span class="green-deal__text">{{deals.deals18.[0].dealPrice}}</span>
-            {{/unless}}
+            {{else}}
+            <span class="green-deal__text">{{deals.deals18.[0].fromPrice}}</span>
+            {{/if}}
             <!-- Extra/Miscellaneous info -->
             {{#if deals.deals18.[0].extra_info}}
             <p class="expiring-deal__info">{{deals.deals18.[0].extra_info}}</p>
