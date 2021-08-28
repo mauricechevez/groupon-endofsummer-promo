@@ -10,39 +10,46 @@ html,
 
 // CUSTOM
 .img290{width: 290px;max-width: 300px;}
-
+.stars{width:70px; padding-right: 3px;}
 
 /* TEXT */
-
+h3{
+  margin-top: 5px !important;
+}
 .small-text{
   font-size: 12px;
   color: #8a8a8a;
-  line-height: 3px;
+  line-height: 5px;
 }
 
 .deal-price-amount{
-  font-size: 18px;
+  font-size: 20px;
+  padding-left: 5px;
 }
 
 .green-deal__text{
-  @extend .deal-price.amount;
+  @extend .deal-price-amount;
   color:$groupon-green--color;
   font-weight: bold;
   line-height: 20px !important;
 }
 
-.expiring-deal-amount{
-  @extend .deal-price.amount;
+.expiring-price-number{
+  @extend .deal-price-amount;
   color: $groupon-expiring--color;
+  font-weight: bold;
+  line-height: 20px !important;
 }
 
-.expiring-price-number{
+.expiring-deal__info{
   color: $groupon-expiring--color;
   font-size: 11px;
+  margin-bottom: 0px !important;
 }
 
-strike{
+.strike{
   text-decoration:line-through;
+  color: #8a8a8a;
 }
 
 /* Content Structure */
@@ -60,7 +67,6 @@ img.header-deal{
   padding-bottom: 30px !important;
   width:100%;
 }
-
 
 // Full Width Headers
 .header {

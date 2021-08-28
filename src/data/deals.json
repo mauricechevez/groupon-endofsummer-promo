@@ -6,8 +6,17 @@
            "location":"New York, NY",
            "originalPrice":"$59",
            "dealPrice":"$16.06",
-           "saleEndDate":"8/27",
-           "img_url":"../assets/img/downtown-bus.jpg"
+           "img_url":"../assets/img/downtown-bus.jpg",
+           "expiring": "true",
+           "expiring_info":{
+               "saleEndInfo":"Sale ends 8/27"
+               },
+           "starRating": "",
+           "ratingsInfo":{
+               "stars":"4.5",
+               "starsImgUrl":"../assets/img/stars_4point5.png",
+               "number_reviews":"257"
+            }
         },
         {
             "title":"NYC Sunset Cruise",
@@ -16,7 +25,17 @@
             "originalPrice":"$40",
             "dealPrice":"$15",
             "saleEndDate":"",
-            "img_url":"../assets/img/nyc-sunset-cruise.jpg"
+            "img_url":"../assets/img/nyc-sunset-cruise.jpg",
+            "expiring": "",
+            "expiring_info":{
+               "saleEndInfo":"Sale ends 8/27"
+               },
+            "starRating": "",
+               "ratingsInfo":{
+                  "stars":"4.5",
+                  "starsImgUrl":"../assets/img/stars_4point5.png",
+                  "number_reviews":"257"
+               }
          },
          {
             "title":"Boat Tour of Statue of Liberty",
@@ -24,8 +43,11 @@
             "location":"New York, NY",
             "originalPrice":"$35",
             "dealPrice":"$12.32",
-            "saleEndDate":"Sale Ends 8/27",
             "img_url":"../assets/img/StatueOfLiberty-MajesticHarbor.jpg",
+            "expiring":"true",
+            "expiring_info":{
+               "saleEndInfo":"Sale ends 8/27"
+            },
             "starRating": "true",
             "ratingsInfo":{
                "stars":"4",
@@ -39,15 +61,94 @@
             "location":"New York, NY",
             "originalPrice":"$14",
             "dealPrice":"$9",
-            "saleEndDate":"",
             "img_url":"../assets/img/Photography_Museum.jpg",
+            "expiring":"",
+            "expiring_info":{
+               "saleEndInfo":""
+            },
             "starRating": "true",
             "ratingsInfo":{
                "stars":"4.5",
                "starsImgUrl":"../assets/img/stars_4point5.png",
                "number_reviews":"257"
             }
-            
+         },
+         {
+            "title":"Boat Tour of Statue of Liberty",
+            "company":"N.Y.C Skylinetours & Cruises",
+            "location":"New York, NY",
+            "originalPrice":"$35",
+            "dealPrice":"$10.40",
+            "img_url":"../assets/img/StatueOfLiberty-SkylineTours.jpg",
+            "expiring":"true",
+            "expiring_info":{
+               "saleEndInfo":"Sale Ends 8/27"
+            },
+            "starRating": "true",
+            "ratingsInfo":{
+               "stars":"4.5",
+               "starsImgUrl":"../assets/img/stars_4point5.png",
+               "number_reviews":"2,063"
+            }
+         },
+         {
+            "title":"Hiphop Dancehall Night Cruise",
+            "company":"Hiphop Dancehall Night Cruise",
+            "location":"New York, NY",
+            "originalPrice":"$40",
+            "dealPrice":"$10",
+            "img_url":"../assets/img/hiphop_dancehall.jpg",
+            "expiring":"",
+            "expiring_info":{
+               "saleEndInfo":""
+            },
+            "starRating": "",
+            "ratingsInfo":{
+               "stars":"4.5",
+               "starsImgUrl":"../assets/img/stars_4point5.png",
+               "number_reviews":"2,063"
+            }
          }
+     
+    ],
+    "deals18":[
+      {
+         "title":"New York Mets",
+         "company":"New York Mets",
+         "location":"Flushing, NY",
+         "originalPrice":"",
+         "dealPrice":"From $5",
+         "img_url":"../assets/img/ny_mets.jpg",
+         "expiring":"",
+         "expiring_info":{
+            "saleEndInfo":""
+         },
+         "starRating": "",
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"2,063"
+         },
+         "extra_info":"Tickets average 21% less than 14 days ago"
+      },
+      {
+         "title":"Standup: Broadway Comedy Club",
+         "company":"Broadway Comedy Club",
+         "location":"New York, NY",
+         "originalPrice":"$122",
+         "dealPrice":"$21",
+         "img_url":"../assets/img/broadway_comedy_club.jpg",
+         "expiring":"",
+         "expiring_info":{
+            "saleEndInfo":""
+         },
+         "starRating": "",
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"2,063"
+         }
+      }
     ]
 }
+
