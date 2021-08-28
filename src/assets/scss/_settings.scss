@@ -17,7 +17,7 @@
 // ---------
 
 $primary-color: #2199e8;
-$secondary-color: #777777;
+$secondary-color: #F2F2F2;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -34,9 +34,14 @@ $body-background: $light-gray;
 $container-background: $white;
 $global-padding: 16px;
 $global-margin: 16px;
-$global-radius: 3px;
+$global-radius: 5px;
 $global-rounded: 500px;
 $global-breakpoint: $global-width + $global-gutter;
+
+// Custom Colors
+$groupon-green--color: #53a318;
+$groupon-expiring--color: #ff2552;
+
 
 // 2. Grid
 // -------
@@ -65,7 +70,7 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;
 $h1-font-size: 34px;
 $h2-font-size: 30px;
-$h3-font-size: 28px;
+$h3-font-size: 14px;
 $h4-font-size: 24px;
 $h5-font-size: 20px;
 $h6-font-size: 18px;
@@ -75,7 +80,7 @@ $small-font-size: 80%;
 $small-font-color: $medium-gray;
 $lead-font-size: $global-font-size * 1.25;
 $lead-line-height: 1.6;
-$text-padding: 10px;
+$text-padding: 5px;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-font-weight;

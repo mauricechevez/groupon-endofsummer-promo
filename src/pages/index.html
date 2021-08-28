@@ -1,4 +1,69 @@
 ---
-layout: index-layout
-subject: My Email Templates
+layout: groupon-layout
+subject: Grab End of Summer Events for $25 or Less
 ---
+<container>
+    <row>
+        <columns>
+            <div><center><img src="{{root}}assets/img/header-deal.png" alt="Summer Deal" role="img button link" class="header-deal" style="padding-top: 20px;"></center></div>
+        </columns>
+    </row>
+    <!-- Top 6 Deals -->
+    <row>
+        
+        <columns large="6">
+            <img src="{{deals.deals6.[0].img_url}}" alt="">
+            <h3>{{deals.deals6.[0].title}}</h3>
+            <p class="small-text">{{deals.deals6.[0].company}}</p>
+            <p class="small-text">{{deals.deals6.[0].location}}</p>
+            <span>{{deals.deals6.[0].originalPrice}}</span><span>{{deals.deals6.[0].dealPrice}}</span>
+            {{#if deals.deals6.[0].saleEndDate}}
+            <p>Deal ends {{deals.deals6.[0].saleEndDate}}</p>
+            {{/if}}
+        </columns>
+        <columns large="6">
+            <img src="{{deals.deals6.[1].img_url}}" alt="">
+            <h3>{{deals.deals6.[1].title}}</h3>
+            <p class="small-text">{{deals.deals6.[1].company}}</p>
+            <p class="small-text">{{deals.deals6.[1].location}}</p>
+            <span>{{deals.deals6.[1].originalPrice}}</span><span>{{deals.deals6.[1].dealPrice}}</span>
+            {{#if deals.deals6.[1].saleEndDate}}
+            <!-- <p>Deal ends {{deals.deals6.[1].saleEndDate}}</p> -->
+            <p>Nothing to show</p>
+            {{/if}}
+        </columns>
+    </row>
+    <row>
+        <columns large="6">
+            <img src="{{deals.deals6.[2].img_url}}" alt="">
+            <h3>{{deals.deals6.[2].title}}</h3>
+            <p class="small-text">{{deals.deals6.[2].company}}</p>
+            <p class="small-text">{{deals.deals6.[2].location}}</p>
+            {{#if deals.deals6.[2].starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals.deals6.[2].ratingsInfo.starsImgUrl}}" style="width:50px;"></span><span class="small-text" style="display:inline-block;">({{deals.deals6.[2].ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <span>{{deals.deals6.[2].originalPrice}}</span><span>{{deals.deals6.[2].dealPrice}}</span>
+            {{#if deals.deals6.[2].saleEndDate}}
+            <p>Deal ends {{deals.deals6.[2].saleEndDate}}</p>
+            {{/if}}
+        </columns>
+        <columns large="6">
+            <img src="{{deals.deals6.[3].img_url}}" alt="">
+            <h3>{{deals.deals6.[3].title}}</h3>
+            <p class="small-text">{{deals.deals6.[3].company}}</p>
+            <p class="small-text">{{deals.deals6.[3].location}}</p>
+            {{#if deals.deals6.[3].starRating}}
+            <p><span style="display:inline-block;"><img src="{{deals.deals6.[3].ratingsInfo.starsImgUrl}}" style="width:50px;"></span><span class="small-text" style="display:inline-block;">({{deals.deals6.[3].ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <span>{{deals.deals6.[3].originalPrice}}</span><span>{{deals.deals6.[3].dealPrice}}</span>
+            {{#if deals.deals6.[3].saleEndDate}}
+            <p>Deal ends {{deals.deals6.[3].saleEndDate}}</p>
+            {{/if}}
+            
+        </columns>
+    </row>
+    <!-- End of Top 6 Deals -->
+    <!-- Groupon Advertisements -->
+    <!-- END of Groupon Advertisements -->
+
+</container>

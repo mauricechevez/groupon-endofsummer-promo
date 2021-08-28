@@ -1,0 +1,53 @@
+{
+    "deals6":[
+        {
+           "title":"Downtown Night Bus Tour ",
+           "company":"TopView SightSeeing",
+           "location":"New York, NY",
+           "originalPrice":"$59",
+           "dealPrice":"$16.06",
+           "saleEndDate":"8/27",
+           "img_url":"../assets/img/downtown-bus.jpg"
+        },
+        {
+            "title":"NYC Sunset Cruise",
+            "company":"Vibes on the Water Sunset NYC",
+            "location":"New York, NY",
+            "originalPrice":"$40",
+            "dealPrice":"$15",
+            "saleEndDate":"",
+            "img_url":"../assets/img/nyc-sunset-cruise.jpg"
+         },
+         {
+            "title":"Boat Tour of Statue of Liberty",
+            "company":"Majestic Harbor Cruises",
+            "location":"New York, NY",
+            "originalPrice":"$35",
+            "dealPrice":"$12.32",
+            "saleEndDate":"Sale Ends 8/27",
+            "img_url":"../assets/img/StatueOfLiberty-MajesticHarbor.jpg",
+            "starRating": "true",
+            "ratingsInfo":{
+               "stars":"4",
+               "starsImgUrl":"../assets/img/stars_4point.png",
+               "number_reviews":"2,045"
+            }
+         },
+         {
+            "title":"Admission to Photography Museum",
+            "company":"Fotografiska",
+            "location":"New York, NY",
+            "originalPrice":"$14",
+            "dealPrice":"$9",
+            "saleEndDate":"",
+            "img_url":"../assets/img/Photography_Museum.jpg",
+            "starRating": "true",
+            "ratingsInfo":{
+               "stars":"4.5",
+               "starsImgUrl":"../assets/img/stars_4point5.png",
+               "number_reviews":"257"
+            }
+            
+         }
+    ]
+}

@@ -2,7 +2,7 @@
 A full mockup of a Groupon marketing email. 
 
 # Technologies used
-Zurb Foundations for Email, HTML and CSS (SCSS).
+Zurb Foundations for Email, HTML, CSS (SCSS), Javascript.
 
 # Original Email Preview
 Click the picture to see the full image
