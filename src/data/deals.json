@@ -16,7 +16,9 @@
                "stars":"4.5",
                "starsImgUrl":"../assets/img/stars_4point5.png",
                "number_reviews":"257"
-            }
+            },
+            "extra_info":false,
+            "deal_link":"https://www.groupon.com/deals/topview-sightseeing-5?p=3&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
         },
         {
             "title":"NYC Sunset Cruise",
@@ -24,18 +26,20 @@
             "location":"New York, NY",
             "originalPrice":"$40",
             "dealPrice":"$15",
-            "saleEndDate":"",
+            "fromPrice":"",
             "img_url":"../assets/img/nyc-sunset-cruise.jpg",
             "expiring": "",
             "expiring_info":{
                "saleEndInfo":"Sale ends 8/27"
                },
             "starRating": "",
-               "ratingsInfo":{
-                  "stars":"4.5",
-                  "starsImgUrl":"../assets/img/stars_4point5.png",
-                  "number_reviews":"257"
-               }
+            "ratingsInfo":{
+               "stars":"4.5",
+               "starsImgUrl":"../assets/img/stars_4point5.png",
+               "number_reviews":"257"
+               },
+            "extra_info":false,
+            "deal_link":"https://www.groupon.com/deals/vibes-on-the-water-sunset-cruise-new-york-city-1?p=4&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
          },
          {
             "title":"Boat Tour of Statue of Liberty",
@@ -43,6 +47,7 @@
             "location":"New York, NY",
             "originalPrice":"$35",
             "dealPrice":"$12.32",
+            "fromPrice":"",
             "img_url":"../assets/img/StatueOfLiberty-MajesticHarbor.jpg",
             "expiring":"true",
             "expiring_info":{
@@ -53,7 +58,9 @@
                "stars":"4",
                "starsImgUrl":"../assets/img/stars_4point.png",
                "number_reviews":"2,045"
-            }
+            },
+            "extra_info":false,
+            "deal_link":"https://www.groupon.com/deals/majestic-harbor-cruises-1?p=5&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
          },
          {
             "title":"Admission to Photography Museum",
@@ -61,6 +68,7 @@
             "location":"New York, NY",
             "originalPrice":"$14",
             "dealPrice":"$9",
+            "fromPrice":"",
             "img_url":"../assets/img/Photography_Museum.jpg",
             "expiring":"",
             "expiring_info":{
@@ -71,7 +79,9 @@
                "stars":"4.5",
                "starsImgUrl":"../assets/img/stars_4point5.png",
                "number_reviews":"257"
-            }
+            },
+            "extra_info":false,
+            "deal_link":"https://www.groupon.com/deals/majestic-harbor-cruises-1?p=5&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
          },
          {
             "title":"Boat Tour of Statue of Liberty",
@@ -79,6 +89,7 @@
             "location":"New York, NY",
             "originalPrice":"$35",
             "dealPrice":"$10.40",
+            "fromPrice":"",
             "img_url":"../assets/img/StatueOfLiberty-SkylineTours.jpg",
             "expiring":"true",
             "expiring_info":{
@@ -89,7 +100,9 @@
                "stars":"4.5",
                "starsImgUrl":"../assets/img/stars_4point5.png",
                "number_reviews":"2,063"
-            }
+            },
+            "extra_info":false,
+            "deal_link":"https://www.groupon.com/deals/n-y-c-skylinetours-cruises-llcx?p=7&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
          },
          {
             "title":"Hiphop Dancehall Night Cruise",
@@ -97,6 +110,7 @@
             "location":"New York, NY",
             "originalPrice":"$40",
             "dealPrice":"$10",
+            "fromPrice":"",
             "img_url":"../assets/img/hiphop_dancehall.jpg",
             "expiring":"",
             "expiring_info":{
@@ -107,7 +121,9 @@
                "stars":"4.5",
                "starsImgUrl":"../assets/img/stars_4point5.png",
                "number_reviews":"2,063"
-            }
+            },
+            "extra_info":false,
+            "deal_link":"https://www.groupon.com/deals/hip-hop-dancehall-top-40-mix-cruise-1?p=8&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
          }
      
     ],
@@ -148,7 +164,9 @@
             "stars":"4.5",
             "starsImgUrl":"../assets/img/stars_4point5.png",
             "number_reviews":"2,063"
-         }
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/gl-broadway-comedy-club-11?p=10&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
       },
       {
          "title":"Standup: New York Comedy Club",
@@ -167,7 +185,9 @@
             "stars":"4.5",
             "starsImgUrl":"../assets/img/stars_4point5.png",
             "number_reviews":"2,063"
-         }
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/new-york-comedy-club-package?p=11&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
       },
       {
          "title":"Party Cruise Admission",
@@ -186,7 +206,9 @@
             "stars":"4.5",
             "starsImgUrl":"../assets/img/stars_4point5.png",
             "number_reviews":"2,063"
-         }
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/booze-cruise-party-cruise-new-york-city?p=12&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
       },
       {
          "title":"Central Park Bike Rentals",
@@ -205,7 +227,9 @@
             "stars":"4.5",
             "starsImgUrl":"../assets/img/stars_4point5.png",
             "number_reviews":"706"
-         }
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/must-see-central-park-4?p=13&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
       },
       {
          "title":"Midnight Party Cruise",
@@ -224,7 +248,93 @@
             "stars":"4.5",
             "starsImgUrl":"../assets/img/stars_4point5.png",
             "number_reviews":"2,063"
-         }
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/nyc-cruises-53?p=14&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
+      },
+      {
+         "title":"New York-Museum Admission",
+         "company":"New-York Historical Society",
+         "location":"New York, NY",
+         "originalPrice":"$38",
+         "dealPrice":"$18.45",
+         "fromPrice":"",
+         "img_url":"../assets/img/ny_museum.jpg",
+         "expiring":true,
+         "expiring_info":{
+            "saleEndInfo":"Sale Ends 8/27"
+         },
+         "starRating": true,
+         "ratingsInfo":{
+            "stars":"4.5",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"1,426"
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/nyc-cruises-53?p=14&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
+      },
+      {
+         "title":"Party Cruise Admission",
+         "company":"Rep Your Flag Labor Day Party..",
+         "location":"New York, NY",
+         "originalPrice":"$40",
+         "dealPrice":"$10",
+         "fromPrice":"",
+         "img_url":"../assets/img/rep_flag_party_cruise.jpg",
+         "expiring":false,
+         "expiring_info":{
+            "saleEndInfo":"Sale Ends 8/27"
+         },
+         "starRating": false,
+         "ratingsInfo":{
+            "stars":"5",
+            "starsImgUrl":"../assets/img/stars_5point.png",
+            "number_reviews":"2,063"
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/rep-your-flag-labor-day-party-cruises?p=16&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
+      },
+      {
+         "title":"Fred Astaire Dance Studio",
+         "company":"Fred Astaire Dance Studio",
+         "location":"New York, NY",
+         "originalPrice":"$75",
+         "dealPrice":"$23.20",
+         "fromPrice":"",
+         "img_url":"../assets/img/fred_astaire.jpg",
+         "expiring":true,
+         "expiring_info":{
+            "saleEndInfo":"Sale Ends 8/27"
+         },
+         "starRating": true,
+         "ratingsInfo":{
+            "stars":"4",
+            "starsImgUrl":"../assets/img/stars_4point5.png",
+            "number_reviews":"73"
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/fred-astaire-dance-studio-new-york-328-east-61st-street-5th-floor-2?p=17&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
+      },
+      {
+         "title":"Dancing - Recreational",
+         "company":"Salsa Sabrosa (Timba/Cuban salsa)",
+         "location":"New York, NY",
+         "originalPrice":"$45",
+         "dealPrice":"$20.25",
+         "fromPrice":"",
+         "img_url":"../assets/img/dancing_recreational.jpg",
+         "expiring":true,
+         "expiring_info":{
+            "saleEndInfo":"Sale Ends 8/27"
+         },
+         "starRating": true,
+         "ratingsInfo":{
+            "stars":"5",
+            "starsImgUrl":"../assets/img/stars_5point.png",
+            "number_reviews":"8"
+         },
+         "extra_info":false,
+         "deals_link":"https://www.groupon.com/deals/salsa-sabrosa-timba?p=18&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
       }
     ]
 }

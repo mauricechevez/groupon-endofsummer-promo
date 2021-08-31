@@ -12,6 +12,17 @@ html,
 .img290{width: 290px;max-width: 300px;}
 .stars{width:70px; padding-right: 3px;}
 
+.deal-container.first{
+  & table > tbody > tr > th{
+    padding-right: 5px !important;
+  }
+}
+.deal-container.last{
+  & table > tbody > tr > th{
+    padding-left: 5px !important;
+  }
+}
+
 /* TEXT */
 h3{
   margin-top: 5px !important;
@@ -63,6 +74,69 @@ h3{
     padding:20px 0px;
   }
 }
+
+.groupon-footer{
+  background-color: $secondary-color;
+  background: $secondary-color;
+  .groupon-footer__container{
+    background-color: $secondary-color;
+    background: $secondary-color;
+    h2{
+      font-size: 18px;
+      font-weight: bold;
+      color: $groupon-green--color;
+    }
+    .groupon-footer__apps{
+      padding-top: 28px;
+      padding-bottom: 0px;
+    }
+    .appstores__container{
+      img.app-store--img{
+        min-width: 30px;
+        max-width: 100px !important;
+        float: right;
+      }
+      img.play-store--img{
+        min-width: 30px;
+        max-width: 105px !important;
+        float: left;
+      }
+    }
+    
+  
+  }
+  .footer-links{
+    .footer-links__container{
+      text-align: center !important;
+    }
+    .spacer{
+      border-top: 1px solid #d5d8db;
+    }  
+    a{
+      font-size: 13px;
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+.privacy{
+  p{
+    font-size: 13px;
+    color:#75787b;
+    text-align: center;
+  }
+}
+.social-icons{
+  text-align: center;
+  margin-bottom: 50px;
+  .columns{
+    padding-bottom: 0px !important;
+  }
+}.twitter{
+  vertical-align: middle;
+}
+
+
 img.header-deal{
   padding-bottom: 30px !important;
   width:100%;
