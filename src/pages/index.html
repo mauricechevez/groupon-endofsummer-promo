@@ -5,7 +5,7 @@ subject: Grab End of Summer Events for $25 or Less
 <container>
     <row>
         <columns>
-            <div><center><img src="{{root}}assets/img/header-deal_600px.png" alt="Summer Deal" role="img button link" class="header-deal" style="padding-top: 20px;"></center></div>
+            <div><center><a href="https://www.groupon.com/landing/25-and-under-events?p=1&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=dynamic-banner-1&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="{{root}}assets/img/header-deal_600px.png" alt="Summer Deal" role="img button link" class="header-deal" style="padding-top: 20px;"></a></center></div>
         </columns>
     </row>
     <!-- Top 6 Deals -->
@@ -204,8 +204,13 @@ subject: Grab End of Summer Events for $25 or Less
     <!-- End of Top 6 Deals -->
     <!-- Groupon Advertisements -->
     <row>
-        <columns><h1 class="text-center">AD SECTION | 2 ads</h1>
-        <hr>
+        <columns class="deal-container" style="padding-bottom: 25px;">
+        <a href="https://sli.groupon.com/click?s=740303&li=f77f0836-d6eb-437f-8209-47f61dd4022c&m=7932d82bfeab950673cf8fc38e817528&p=2021-08-27T09:43:20Z"><img src="{{root}}/assets/img/14freemeals_sm.jpg"></a>
+        <img src="{{root}}/assets/img/ads_icon.png" alt="" align="right" style="text-align: right;">
+        </columns>
+        <columns class="deal-container" style="padding-bottom: 25px;">
+        <a href="https://sli.groupon.com/click?s=740307&li=f77f0836-d6eb-437f-8209-47f61dd4022c&m=7932d82bfeab950673cf8fc38e817528&p=2021-08-27T09:43:20Z"><img src="{{root}}/assets/img/adoptUSKids.jpg"></a>
+        <img src="{{root}}/assets/img/ads_icon.png" alt="" align="right" style="text-align: right;">
         </columns>
     </row>
     <!-- END of Groupon Advertisements -->
@@ -270,7 +275,7 @@ subject: Grab End of Summer Events for $25 or Less
     <row>
         <columns large="6" class="deal-container">
             {{#with deals.deals18.[2] as | deals18 |}}
-            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{deals18.title}}</h3>
             <p class="small-text">{{deals18.company}}</p>
             <p class="small-text">{{deals18.location}}</p>
@@ -299,7 +304,7 @@ subject: Grab End of Summer Events for $25 or Less
         </columns>
         <columns large="6" class="deal-container">
             {{#with deals.deals18.[3] as | deals18 |}}
-            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{deals18.title}}</h3>
             <p class="small-text">{{deals18.company}}</p>
             <p class="small-text">{{deals18.location}}</p>
@@ -331,7 +336,7 @@ subject: Grab End of Summer Events for $25 or Less
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[4] as | deals18 |}}
-            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{deals18.title}}</h3>
             <p class="small-text">{{deals18.company}}</p>
             <p class="small-text">{{deals18.location}}</p>
@@ -360,7 +365,7 @@ subject: Grab End of Summer Events for $25 or Less
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[5] as | deals18 |}}
-            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{deals18.title}}</h3>
             <p class="small-text">{{deals18.company}}</p>
             <p class="small-text">{{deals18.location}}</p>
@@ -392,7 +397,7 @@ subject: Grab End of Summer Events for $25 or Less
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[6] as | deals18 |}}
-            <img src="{{this.img_url}}" alt="{{this.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{this.title}}</h3>
             <p class="small-text">{{this.company}}</p>
             <p class="small-text">{{this.location}}</p>
@@ -421,7 +426,7 @@ subject: Grab End of Summer Events for $25 or Less
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[7] as | deals18 |}}
-            <img src="{{this.img_url}}" alt="{{this.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{this.title}}</h3>
             <p class="small-text">{{this.company}}</p>
             <p class="small-text">{{this.location}}</p>
@@ -453,7 +458,7 @@ subject: Grab End of Summer Events for $25 or Less
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[8] as | deals18 |}}
-            <img src="{{this.img_url}}" alt="{{this.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{this.title}}</h3>
             <p class="small-text">{{this.company}}</p>
             <p class="small-text">{{this.location}}</p>
@@ -482,7 +487,251 @@ subject: Grab End of Summer Events for $25 or Less
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[9] as | deals18 |}}
-            <img src="{{this.img_url}}" alt="{{this.title}}">
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+    </row>
+    <!--10-->
+    <row>
+        <columns class="deal-container">
+            {{#with deals.deals18.[10] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+        <columns class="deal-container">
+            {{#with deals.deals18.[11] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+    </row>
+    <!--12-->
+    <row>
+        <columns class="deal-container">
+            {{#with deals.deals18.[12] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+        <columns class="deal-container">
+            {{#with deals.deals18.[13] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+    </row>
+    <!--14-->
+    <row>
+        <columns class="deal-container">
+            {{#with deals.deals18.[14] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+        <columns class="deal-container">
+            {{#with deals.deals18.[15] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+    </row>
+    <!--16-->
+    <row>
+        <columns class="deal-container">
+            {{#with deals.deals18.[16] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text">{{this.company}}</p>
+            <p class="small-text">{{this.location}}</p>
+            <!-- Star Rating Info -->
+            {{#if this.starRating}}
+            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            {{/if}}
+            <!-- Active Deal Info-->
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                {{else}}
+                <span class="green-deal__text">{{this.fromPrice}}</span>
+                {{/if}}
+            {{/unless}}         
+            <!-- Extra/Miscellaneous info -->
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
+            {{/if}}
+            <!-- Expiring Deal Info -->
+            {{#if this.expiring}}
+            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
+            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            {{/if}}
+        {{/with}}
+        </columns>
+        <columns class="deal-container">
+            {{#with deals.deals18.[17] as | deals18 |}}
+            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
             <h3>{{this.title}}</h3>
             <p class="small-text">{{this.company}}</p>
             <p class="small-text">{{this.location}}</p>
@@ -514,33 +763,28 @@ subject: Grab End of Summer Events for $25 or Less
     <!-- Eat, Play, Relax Categories Section -->
     <row>
         <columns large="4">
-        <img src="{{root}}/assets/img/eat.png" alt="Eat">
-
+        <a href="https://www.groupon.com/browse/?category=food-and-drink&p=27&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="{{root}}/assets/img/eat.png" alt="Eat"></a>
         </columns>
         <columns large="4">
-        <img src="{{root}}/assets/img/play.png" alt="Play">
+        <a href="https://www.groupon.com/browse/?category=things-to-do&p=28&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="{{root}}/assets/img/play.png" alt="Play"></a>
         </columns>
         <columns large="4">
-        <img src="{{root}}/assets/img/relax.png" alt="Relax">
+        <a href="https://www.groupon.com/browse/?category=beauty-and-spas&p=29&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="{{root}}/assets/img/relax.png" alt="Relax"></a>
         </columns>
     </row>
     <row>
         <columns>
-        <img src="{{root}}/assets/img/new_favorites_600px.png" alt="Grab New Favorites">
+            <a href="https://www.groupon.com/landing/grablife?p=36&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=msg&c=70931&d=generic_message-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="{{root}}/assets/img/new_favorites_600px.png" alt="Grab New Favorites"></a>
         </columns>
     </row>
      <!-- END of Eat, Play, Relax Categories Section -->
          <!-- Groupon Advertisements -->
-    <row>
-        <columns><h1 class="text-center">AD SECTION | 2 ads</h1>
-        <hr>
-        </columns>
-    </row>
-    <!-- END of Groupon Advertisements -->
+
     <!-- Large Hello Fresh ad-->
     <row>
         <columns>
-        <center><img src="{{root}}/assets/img/Hello_Fresh_14meals.jpg" alt="Hello Fresh"></center>
+            <a href="https://sli.groupon.com/click?s=688303&li=f77f0836-d6eb-437f-8209-47f61dd4022c&m=7932d82bfeab950673cf8fc38e817528&p=2021-08-27T09:43:20Z"><img src="{{root}}/assets/img/Hello_Fresh_14meals.jpg" alt="Hello Fresh"></a>
+            <img src="{{root}}/assets/img/ads_icon.png" alt="" align="right" style="text-align: right;">
         </columns>
     </row>
     <!-- END Large Hello Fresh ad-->
