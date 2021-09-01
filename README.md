@@ -2,7 +2,17 @@
 A full mockup of a Groupon marketing email. 
 
 # Technologies used
-Zurb Foundations for Email, HTML, CSS (SCSS), Javascript.
+Zurb Foundations for Email, HTML, CSS (SCSS), Javascript. Tesed with Litmus' [Putsmail](https://putsmail.com/)
+
+# Completed Email
+Click [here](https://groupon-endofsummer-deals.netlify.app/) to view the completed email. 
+
+**This version is responsive**. I'm sure Groupon has a reason why they didn't make their email responsive (phones, in portrait mode only), so I took creative liberty and made it responsive. You can view it either on a real mobile device or use your browser's dev tools.
+
+
+<a href="https://groupon-endofsummer-deals.netlify.app/"><img src="./screenshot/completed_sept1.png"></a>
+
+---
 
 # Original Email Preview
 Click the picture to see the full image of the original email.
@@ -11,16 +21,11 @@ Click the picture to see the full image of the original email.
 
 
 ## Mobile View
-The mobile email is not responsive. This is a preview of that email from the Yahoo mail app.
+The original mobile email is **not** responsive. This is a preview of that email from the Yahoo mail app.
 
 ![Mobile View](./screenshot/mobile_groupon_original_sm.jpg)
 
 ---
-# Current Status
-This is complete. Click the picture to see the completed result. I decided to make the email responsive as well. I'm sure Groupon has a reason why they didn't make their email responsive (phones, in portrait mode only), so I took creative liberty and made it responsive. You can view it either on a real mobile device or use your browser's dev tools.
-
-
-<a href="https://groupon-endofsummer-deals.netlify.app/"><img src="./screenshot/completed_sept1.png"></a>
 
 # Layout outline
 I'm only guessing what Groupon actually does in their template. Based on the ads from a third party in the middle of the page, I separated the first 6 deals into a **"Top 6"** section, and the rest are in another section, for a total of **24 deals**. From what I've seen in other Groupon emails, the amount of deals advertised can vary, but they're always an even number.
