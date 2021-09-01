@@ -41,7 +41,7 @@ I'm only guessing what Groupon actually does in their template. Based on the ads
 
 
 # Template logic
-The template uses the [Handlebars built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html) to handle the logic behind what is displayed on the page, depending on the JSON data present in the object's index number. 
+The template uses the [Handlebars built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html) to handle the logic behind what is displayed on the page, depending on the JSON data present in the object's index number. If the information in the JSON data is either blank ("") or `false`, the item does not show up on the template. Some of the data serves more as conditional values than real values used in the template.
 
 **Example Column**
 ```html
@@ -98,26 +98,6 @@ The template uses the [Handlebars built-in helpers](https://handlebarsjs.com/gui
 Here's some JSON data that would be placed in template.
 ```JSON
 {
-            "title":"Boat Tour of Statue of Liberty",
-            "company":"N.Y.C Skylinetours & Cruises",
-            "location":"New York, NY",
-            "originalPrice":"$35",
-            "dealPrice":"$10.40",
-            "fromPrice":"",
-            "img_url":"https://i.postimg.cc/6QtkV0zJ/Statue-Of-Liberty-Skyline-Tours.jpg",
-            "expiring":"true",
-            "expiring_info":{
-               "saleEndInfo":"Sale Ends 8/27"
-            },
-            "starRating": "true",
-            "ratingsInfo":{
-               "stars":"4.5",
-               "starsImgUrl":"https://i.postimg.cc/g0sfgZBw/stars-4point5.png",
-               "number_reviews":"2,063"
-            },
-            "extra_info":false,
-            "deal_link":"https://www.groupon.com/deals/n-y-c-skylinetours-cruises-llcx?p=7&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
-         },
          {
             "title":"Hiphop Dancehall Night Cruise",
             "company":"Hiphop Dancehall Night Cruise",
