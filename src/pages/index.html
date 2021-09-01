@@ -13,26 +13,34 @@ subject: Grab End of Summer Events for $25 or Less
         <columns class="deal-container">
             {{#with deals.deals6.[0] as | deals6 |}}
             <a href="{{this.deal_link}}">
-                <img src="{{this.img_url}}" alt="" style="width:270px;">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
             </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -41,34 +49,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
             {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals6.[1] as | deals6 |}}
             <a href="{{this.deal_link}}">
-                <img src="{{this.img_url}}" alt="">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
             </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -77,8 +97,12 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
             {{/with}}
         </columns>
@@ -100,7 +124,6 @@ subject: Grab End of Summer Events for $25 or Less
                     <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
                 </tr>
             </table>
-            <!-- <p><span style="display:inline-block;"></span><span class="small-text" style="display:inline-block;"></span></p> -->
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -186,26 +209,34 @@ subject: Grab End of Summer Events for $25 or Less
         <columns large="6" class="deal-container">
             {{#with deals.deals6.[4] as | deals6 |}}
             <a href="{{this.deal_link}}">
-                <img src="{{this.img_url}}" alt="">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
             </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -214,34 +245,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
             {{/with}}
         </columns>
         <columns large="6" class="deal-container">
             {{#with deals.deals6.[5] as | deals6 |}}
             <a href="{{this.deal_link}}">
-                <img src="{{this.img_url}}" alt="">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
             </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -250,8 +293,12 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
             {{/with}}
         </columns>
@@ -259,11 +306,11 @@ subject: Grab End of Summer Events for $25 or Less
     <!-- End of Top 6 Deals -->
     <!-- Groupon Advertisements -->
     <row>
-        <columns class="deal-container" style="padding-bottom: 25px;">
+        <columns class="deal-container" style="padding-bottom: 25px;" small="6">
         <a href="https://sli.groupon.com/click?s=740303&li=f77f0836-d6eb-437f-8209-47f61dd4022c&m=7932d82bfeab950673cf8fc38e817528&p=2021-08-27T09:43:20Z"><img src="https://i.postimg.cc/0jT3zdr4/14freemeals-sm.jpg"></a>
         <img src="https://i.postimg.cc/NGZf63H3/ads-icon.png" alt="" align="right" style="text-align: right;">
         </columns>
-        <columns class="deal-container" style="padding-bottom: 25px;">
+        <columns class="deal-container" style="padding-bottom: 25px;" small="6">
         <a href="https://sli.groupon.com/click?s=740307&li=f77f0836-d6eb-437f-8209-47f61dd4022c&m=7932d82bfeab950673cf8fc38e817528&p=2021-08-27T09:43:20Z"><img src="https://i.postimg.cc/fTXWB87J/adopt-USKids.jpg"></a>
         <img src="https://i.postimg.cc/NGZf63H3/ads-icon.png" alt="" align="right" style="text-align: right;">
         </columns>
@@ -273,204 +320,332 @@ subject: Grab End of Summer Events for $25 or Less
     <row>
         <columns large="6" class="deal-container">
             {{#with deals.deals18.[0] as | deals18 |}}
-            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
-            <h3>{{deals18.title}}</h3>
-            <p class="small-text">{{deals18.company}}</p>
-            <p class="small-text">{{deals18.location}}</p>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
-            {{#if deals18.starRating}}
-            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{#if this.starRating}}
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#if deals18.originalPrice}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
-            {{else}}
-            <span class="green-deal__text">{{deals18.fromPrice}}</span>
-            {{/if}}
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
+                {{else}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
+                {{/if}}
+            {{/unless}}         
             <!-- Extra/Miscellaneous info -->
-            {{#if deals18.extra_info}}
-            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if deals18.expiring}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
-            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{#if this.expiring}}
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns large="6" class="deal-container">
             {{#with deals.deals18.[1] as | deals18 |}}
-            <img src="{{deals18.img_url}}" alt="{{deals18.title}}">
-            <h3>{{deals18.title}}</h3>
-            <p class="small-text">{{deals18.company}}</p>
-            <p class="small-text">{{deals18.location}}</p>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
-            {{#if deals18.starRating}}
-            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{#if this.starRating}}
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#if deals18.originalPrice}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
-            {{else}}
-            <span class="green-deal__text">{{deals18.fromPrice}}</span>
-            {{/if}}
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
+                {{else}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
+                {{/if}}
+            {{/unless}}         
             <!-- Extra/Miscellaneous info -->
-            {{#if deals18.extra_info}}
-            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if deals18.expiring}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
-            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{#if this.expiring}}
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--2-->
     <row>
         <columns large="6" class="deal-container">
             {{#with deals.deals18.[2] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
-            <h3>{{deals18.title}}</h3>
-            <p class="small-text">{{deals18.company}}</p>
-            <p class="small-text">{{deals18.location}}</p>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
-            {{#if deals18.starRating}}
-            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{#if this.starRating}}
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#unless deals18.expiring}}
-                {{#if deals18.originalPrice}}
-                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
-            {{#if deals18.extra_info}}
-            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if deals18.expiring}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
-            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{#if this.expiring}}
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns large="6" class="deal-container">
             {{#with deals.deals18.[3] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
-            <h3>{{deals18.title}}</h3>
-            <p class="small-text">{{deals18.company}}</p>
-            <p class="small-text">{{deals18.location}}</p>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
-            {{#if deals18.starRating}}
-            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{#if this.starRating}}
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#unless deals18.expiring}}
-                {{#if deals18.originalPrice}}
-                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
-            {{#if deals18.extra_info}}
-            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if deals18.expiring}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
-            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{#if this.expiring}}
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--4-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[4] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
-            <h3>{{deals18.title}}</h3>
-            <p class="small-text">{{deals18.company}}</p>
-            <p class="small-text">{{deals18.location}}</p>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
-            {{#if deals18.starRating}}
-            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{#if this.starRating}}
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#unless deals18.expiring}}
-                {{#if deals18.originalPrice}}
-                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
-            {{#if deals18.extra_info}}
-            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if deals18.expiring}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
-            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{#if this.expiring}}
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[5] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
-            <h3>{{deals18.title}}</h3>
-            <p class="small-text">{{deals18.company}}</p>
-            <p class="small-text">{{deals18.location}}</p>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
+            <h3>{{this.title}}</h3>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
-            {{#if deals18.starRating}}
-            <p><span style="display:inline-block;"><img src="{{deals18.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{deals18.ratingsInfo.number_reviews}})</span></p>
+            {{#if this.starRating}}
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
-            {{#unless deals18.expiring}}
-                {{#if deals18.originalPrice}}
-                <span class="strike">{{deals18.originalPrice}}</span><span class="green-deal__text">{{deals18.dealPrice}}</span>
+            {{#unless this.expiring}}
+                {{#if this.originalPrice}}
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{deals18.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
-            {{#if deals18.extra_info}}
-            <p class="expiring-deal__info">{{deals18.extra_info}}</p>
+            {{#if this.extra_info}}
+            <p class="expiring-deal__info">{{this.extra_info}}</p>
             {{/if}}
             <!-- Expiring Deal Info -->
-            {{#if deals18.expiring}}
-            <span class="strike">{{deals18.originalPrice}}</span><span class="expiring-price-number">{{deals18.dealPrice}}</span>
-            <p class="expiring-deal__info">{{deals18.expiring_info.saleEndInfo}}</p>
+            {{#if this.expiring}}
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--6-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[6] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -479,32 +654,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[7] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -513,35 +702,49 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--8-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[8] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -550,32 +753,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[9] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -584,35 +801,49 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--10-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[10] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -621,32 +852,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[11] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -655,35 +900,49 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--12-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[12] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -692,32 +951,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[13] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -726,35 +999,49 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--14-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[14] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -763,32 +1050,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[15] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -797,35 +1098,49 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
     <!--16-->
     <row>
         <columns class="deal-container">
             {{#with deals.deals18.[16] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -834,32 +1149,46 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
         <columns class="deal-container">
             {{#with deals.deals18.[17] as | deals18 |}}
-            <a href="{{this.deals_link}}"><img src="{{this.img_url}}" alt="{{this.title}}"></a>
+            <a href="{{this.deal_link}}">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
+            </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
             <table>
-    <tr>
-        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
-        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
-    </tr>
-</table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -868,22 +1197,26 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>   
             {{/if}}
-        {{/with}}
+            {{/with}}
         </columns>
     </row>
 
-    <!-- Eat, Play, Relax Categories Section -->
-    <row>
-        <columns large="4">
+    <!-- Categories Section -->
+    <row class="categories">
+        <columns large="4" small="4" class="eat">
         <a href="https://www.groupon.com/browse/?category=food-and-drink&p=27&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="https://i.postimg.cc/bNQ8Qs8n/eat.png" alt="Eat"></a>
         </columns>
-        <columns large="4">
+        <columns large="4" small="4" class="play">
         <a href="https://www.groupon.com/browse/?category=things-to-do&p=28&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="https://i.postimg.cc/507W2CBc/play.png" alt="Play"></a>
         </columns>
-        <columns large="4">
+        <columns large="4" small="4" class="relax">
         <a href="https://www.groupon.com/browse/?category=beauty-and-spas&p=29&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=banner&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="https://i.postimg.cc/SRH0Wb1D/relax.png" alt="Relax"></a>
         </columns>
     </row>
@@ -892,7 +1225,7 @@ subject: Grab End of Summer Events for $25 or Less
             <a href="https://www.groupon.com/landing/grablife?p=36&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=msg&c=70931&d=generic_message-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"><img src="https://i.postimg.cc/6pYk0ZP8/new-favorites-600px.png" alt="Grab New Favorites"></a>
         </columns>
     </row>
-     <!-- END of Eat, Play, Relax Categories Section -->
+     <!-- END of Categories Section -->
          <!-- Groupon Advertisements -->
 
     <!-- Large Hello Fresh ad-->
