@@ -2,7 +2,7 @@
 A full mockup of a Groupon marketing email. 
 
 # Technologies used
-Zurb Foundations for Email, HTML, CSS (SCSS), Javascript. Tesed with Litmus' [Putsmail](https://putsmail.com/)
+Zurb Foundations for Email, HTML, CSS (SCSS), Javascript. Tested with Litmus' [Putsmail](https://putsmail.com/)
 
 # Completed Email
 Click [here](https://groupon-endofsummer-deals.netlify.app/) to view the completed email. 
@@ -37,6 +37,7 @@ I'm only guessing what Groupon actually does in their template. Based on the ads
 |.....  | Top 6 Deal # 6|
 |   <center>Ads<center>   | Ads | 
 | More Deals # 1 | More Deals # 2 |
+| |..... | |.....|
 | More Deals # 17 | More Deals # 18 |
 
 
@@ -97,28 +98,27 @@ The template uses the [Handlebars built-in helpers](https://handlebarsjs.com/gui
 
 Here's some JSON data that would be placed in template.
 ```JSON
-{
-         {
-            "title":"Hiphop Dancehall Night Cruise",
-            "company":"Hiphop Dancehall Night Cruise",
-            "location":"New York, NY",
-            "originalPrice":"$40",
-            "dealPrice":"$10",
-            "fromPrice":"",
-            "img_url":"https://i.postimg.cc/PxpnNq2P/hiphop-dancehall.jpg",
-            "expiring":"",
-            "expiring_info":{
-               "saleEndInfo":""
-            },
-            "starRating": "",
-            "ratingsInfo":{
-               "stars":"4.5",
-               "starsImgUrl":"https://i.postimg.cc/g0sfgZBw/stars-4point5.png",
-               "number_reviews":"2,063"
-            },
-            "extra_info":false,
-            "deal_link":"https://www.groupon.com/deals/hip-hop-dancehall-top-40-mix-cruise-1?p=8&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
-         }
+    {
+    "title":"Hiphop Dancehall Night Cruise",
+    "company":"Hiphop Dancehall Night Cruise",
+    "location":"New York, NY",
+    "originalPrice":"$40",
+    "dealPrice":"$10",
+    "fromPrice":"",
+    "img_url":"https://i.postimg.cc/PxpnNq2P/hiphop-dancehall.jpg",
+    "expiring":"",
+    "expiring_info":{
+        "saleEndInfo":""
+    },
+    "starRating": "",
+    "ratingsInfo":{
+        "stars":"4.5",
+        "starsImgUrl":"https://i.postimg.cc/g0sfgZBw/stars-4point5.png",
+        "number_reviews":"2,063"
+    },
+    "extra_info":false,
+    "deal_link":"https://www.groupon.com/deals/hip-hop-dancehall-top-40-mix-cruise-1?p=8&utm_source=channel_occasions_im&utm_medium=email&t_division=new-york&date=20210827&uu=873e65a0-4503-11e5-b3ae-002590980766&CID=US&tx=0&s=body&c=image&d=deal-page&utm_campaign=f77f0836-d6eb-437f-8209-47f61dd4022c_0_20210827"
+    }
 
 ```
 
