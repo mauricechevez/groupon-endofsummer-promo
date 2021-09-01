@@ -20,7 +20,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -51,7 +56,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -77,21 +87,35 @@ subject: Grab End of Summer Events for $25 or Less
         <columns large="6" class="deal-container">
             {{#with deals.deals6.[2] as | deals6 |}}
             <a href="{{this.deal_link}}">
-                <img src="{{this.img_url}}" alt="">
+                <img src="{{this.img_url}}" alt="" class="deal-img">
             </a>
             <h3>{{this.title}}</h3>
-            <p class="small-text">{{this.company}}</p>
-            <p class="small-text">{{this.location}}</p>
+            <p class="small-text company-text">{{this.company}}</p>
+            <p class="small-text location-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+                <tr>
+                    <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+                    <td class="ratings-container"><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+                </tr>
+            </table>
+            <!-- <p><span style="display:inline-block;"></span><span class="small-text" style="display:inline-block;"></span></p> -->
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
                 {{#if this.originalPrice}}
-                <span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="strike">{{this.originalPrice}}</span><span class="green-deal__text">{{this.dealPrice}}</span></td>
+                    </tr>
+                </table>
                 {{else}}
-                <span class="green-deal__text">{{this.fromPrice}}</span>
+                <table class="active-deal__container">
+                    <tr>
+                        <td><span class="green-deal__text">{{this.fromPrice}}</span></td>
+                    </tr>
+                </table>
                 {{/if}}
             {{/unless}}         
             <!-- Extra/Miscellaneous info -->
@@ -100,8 +124,14 @@ subject: Grab End of Summer Events for $25 or Less
             {{/if}}
             <!-- Expiring Deal Info -->
             {{#if this.expiring}}
-            <span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span>
-            <p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p>
+            <table class="expiring-price__container">
+                <tr>
+                    <td><span class="strike">{{this.originalPrice}}</span><span class="expiring-price-number">{{this.dealPrice}}</span></td>
+                </tr>
+                <tr><td colspan="1"><p class="expiring-deal__info">{{this.expiring_info.saleEndInfo}}</p></td></tr>
+            </table>
+            
+            
             {{/if}}
             {{/with}}
         </columns>
@@ -115,7 +145,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -148,7 +183,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -179,7 +219,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -403,7 +448,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -432,7 +482,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -464,7 +519,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -493,7 +553,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -525,7 +590,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -554,7 +624,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -586,7 +661,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -615,7 +695,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -647,7 +732,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -676,7 +766,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -708,7 +803,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
@@ -737,7 +837,12 @@ subject: Grab End of Summer Events for $25 or Less
             <p class="small-text">{{this.location}}</p>
             <!-- Star Rating Info -->
             {{#if this.starRating}}
-            <p><span style="display:inline-block;"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></span><span class="small-text" style="display:inline-block;">({{this.ratingsInfo.number_reviews}})</span></p>
+            <table>
+    <tr>
+        <td class="stars-container"><img src="{{this.ratingsInfo.starsImgUrl}}" class="stars"></td>
+        <td><p class="small-text rating-text">({{this.ratingsInfo.number_reviews}})</p></td>
+    </tr>
+</table>
             {{/if}}
             <!-- Active Deal Info-->
             {{#unless this.expiring}}
