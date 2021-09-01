@@ -90,6 +90,8 @@ h3{
   line-height: 20px !important;
 }
 
+
+
 .expiring-price-number{
   @extend .deal-price-amount;
   color: $groupon-expiring--color;
@@ -106,7 +108,7 @@ h3{
   }
 }
 
-.expiring-price__container{
+.expiring-price__container, .active-deal__container{
   & tbody > tr > td{
     @media only screen and (max-width: #{$global-breakpoint}){
     text-align: center;
